@@ -10,14 +10,27 @@
         font-size: 50px;
         line-height: 1.2;
         color: $color-primary;
-        margin: 0 0 77px 0;
+        margin: 0 auto 77px auto;
+        text-align: center;
 
+        @include sm {
+            font-size: 35px;
+        }
     }
 
     &__cards {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 30px;
+        display: grid;
+        column-gap: 30px;
+        grid-template-columns: repeat(3, 1fr);
+
+        @include xl-md {
+            row-gap: 40px;
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include md {
+            grid-template-columns: 1fr;
+        }
 
     }
 
@@ -25,28 +38,34 @@
     &__card {
         display: flex;
         flex-direction: column;
-        max-width: 409px;
         color: $color-primary;
-    
+
+        @include xl {
+            max-width: 70%;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+        }
+
         &-title {
             font-weight: 600;
             font-size: 30px;
             line-height: 1.33;
         }
-    
+
         &-picture {
             order: -1;
         }
-    
+
         &-description {
             font-size: 20px;
             line-height: 1.5;
         }
-    
+
         &-uLink {
             text-decoration: underline;
         }
-    
+
         &-link {
             text-decoration: underline;
             font-size: 20px;
@@ -60,7 +79,7 @@
     margin: 43px 0 17px 0;
 }
 
-.card2__title{
+.card2__title {
     margin: 77px 0 17px 0;
 }
 

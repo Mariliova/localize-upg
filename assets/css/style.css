@@ -602,7 +602,9 @@ a {
   margin-bottom: 187px;
 }
 .productivity__title {
-  margin: 0 0 77px 0;
+  margin: 0 auto 77px auto;
+
+  text-align: center;
 
   color: #000000;
 
@@ -611,13 +613,12 @@ a {
   line-height: 1.2;
 }
 .productivity__cards {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  display: grid;
 
-  gap: 30px;
+  -webkit-column-gap: 30px;
+     -moz-column-gap: 30px;
+          column-gap: 30px;
+  grid-template-columns: repeat(3, 1fr);
 }
 .productivity__card {
   display: -webkit-box;
@@ -627,8 +628,6 @@ a {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
       flex-direction: column;
-
-  max-width: 409px;
 
   color: #000000;
 }
@@ -760,11 +759,26 @@ a {
   .formats {
     margin-top: 60px;
   }
+  .productivity__card {
+    -webkit-box-align: center;
+    align-items: center;
+    -ms-flex-align: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+
+    max-width: 70%;
+    margin: 0 auto;
+  }
 }
 
 @media (max-width: 1199.8px) and (min-width: 768px) {
   .formats__cards {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .productivity__cards {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 40px;
   }
 }
 
@@ -858,6 +872,9 @@ a {
   .formats__cards {
     grid-template-columns: 1fr;
   }
+  .productivity__cards {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 575.8px) {
@@ -883,6 +900,9 @@ a {
     font-size: 35px;
   }
   .formats__title {
+    font-size: 35px;
+  }
+  .productivity__title {
     font-size: 35px;
   }
 }
