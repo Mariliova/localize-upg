@@ -338,15 +338,6 @@ a {
   border-radius: 3px;
   background: #ff6336;
 }
-.header-navbar__btn-row:nth-child(1) {
-  top: 0;
-}
-.header-navbar__btn-row:nth-child(2) {
-  top: 9px;
-}
-.header-navbar__btn-row:nth-child(3) {
-  top: 18px;
-}
 .header-navbar__btn.open .header-navbar__btn-row:nth-child(1) {
   top: 9px;
 
@@ -562,13 +553,12 @@ a {
 .formats__cards {
   display: grid;
 
-  padding-right: 40px;
-  padding-left: 40px;
+  margin-right: 40px;
+  margin-left: 40px;
 
   -webkit-column-gap: 110px;
      -moz-column-gap: 110px;
           column-gap: 110px;
-  grid-template-columns: repeat(3, 1fr);
   row-gap: 69px;
 }
 .formats__card {
@@ -581,6 +571,7 @@ a {
       flex-direction: column;
 
   max-width: 330px;
+  margin: 0 auto;
 
   text-align: center;
 }
@@ -605,6 +596,78 @@ a {
 .formats__uLink {
   text-decoration: underline;
 }
+
+.productivity {
+  margin-top: 149px;
+  margin-bottom: 187px;
+}
+.productivity__title {
+  margin: 0 0 77px 0;
+
+  color: #000000;
+
+  font-size: 50px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+.productivity__cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+
+  gap: 30px;
+}
+.productivity__card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+      flex-direction: column;
+
+  max-width: 409px;
+
+  color: #000000;
+}
+.productivity__card-title {
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 1.33;
+}
+.productivity__card-picture {
+  -webkit-box-ordinal-group: 0;
+  -ms-flex-order: -1;
+  order: -1;
+}
+.productivity__card-description {
+  font-size: 20px;
+  line-height: 1.5;
+}
+.productivity__card-uLink {
+  text-decoration: underline;
+}
+.productivity__card-link {
+  text-decoration: underline;
+
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+.card1__title {
+  margin: 43px 0 17px 0;
+}
+
+.card2__title {
+  margin: 77px 0 17px 0;
+}
+
+.card3__title {
+  margin: 59px 0 17px 0;
+}
+
 @media (min-width: 576px) {
   .btn--md {
     min-width: 160px;
@@ -617,6 +680,7 @@ a {
     font-size: 25px;
   }
 }
+
 @media (min-width: 768px) {
   .header-navbar__btn {
     display: none;
@@ -625,6 +689,7 @@ a {
     width: 632px;
   }
 }
+
 @media (min-width: 992px) {
   .header-menu__actions {
     margin-left: auto;
@@ -636,6 +701,7 @@ a {
     width: 100%;
   }
 }
+
 @media (min-width: 1200px) {
   .header-content {
     grid-template-areas: "ttl pic" "dsc pic" "act pic" "nts pic";
@@ -674,7 +740,11 @@ a {
 
     margin-right: 138px;
   }
+  .formats__cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
+
 @media (max-width: 1199.8px) {
   .header-navbar__list {
     -webkit-column-gap: 0.4em;
@@ -687,7 +757,17 @@ a {
   .section__title {
     margin-top: 60px;
   }
+  .formats {
+    margin-top: 60px;
+  }
 }
+
+@media (max-width: 1199.8px) and (min-width: 768px) {
+  .formats__cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media (max-width: 1199.8px) and (min-width: 992px) {
   .header-content {
     grid-template-areas: "ttl pic" "dsc pic" "act pic" "nts pic";
@@ -702,6 +782,7 @@ a {
     grid-template-columns: repeat(3, minmax(50px, max-content));
   }
 }
+
 @media (max-width: 991.8px) {
   .header-content {
     text-align: center;
@@ -714,6 +795,7 @@ a {
     justify-content: center;
   }
 }
+
 @media (max-width: 991.8px) and (min-width: 576px) {
   .brands__list {
     -webkit-box-pack: space-evenly;
@@ -724,6 +806,7 @@ a {
     grid-template-columns: repeat(2, minmax(50px, max-content));
   }
 }
+
 @media (max-width: 991.8px) and (min-width: 768px) {
   .header-menu {
     -webkit-box-align: center;
@@ -738,6 +821,7 @@ a {
     width: 50%;
   }
 }
+
 @media (max-width: 767.8px) {
   .header-menu {
     -webkit-box-pack: justify;
@@ -771,7 +855,11 @@ a {
   .section__picture {
     max-width: 632px;
   }
+  .formats__cards {
+    grid-template-columns: 1fr;
+  }
 }
+
 @media (max-width: 575.8px) {
   .btn--md {
     min-width: 120px;
@@ -783,9 +871,18 @@ a {
   .header-content__description {
     font-size: 20px;
   }
+  .brands__title {
+    font-size: 35px;
+  }
   .brands__list {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
+  }
+  .section__title {
+    font-size: 35px;
+  }
+  .formats__title {
+    font-size: 35px;
   }
 }

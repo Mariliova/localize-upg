@@ -28,19 +28,6 @@
       left: 0;
       transform: rotate(0deg);
       transition: .25s ease-in-out;
-
-      &:nth-child(1) {
-        top: 0px;
-      }
-
-      &:nth-child(2) {
-        top: 9px;
-      }
-
-      &:nth-child(3) {
-        top: 18px;
-      }
-
     }
 
     &.open .header-navbar__btn-row {

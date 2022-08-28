@@ -44,6 +44,10 @@
         @include xl {
             margin-top: 60px;
         }
+
+        @include sm {
+            font-size: 35px;
+        }
     }
 
     &__description {
@@ -77,12 +81,12 @@
         @include md {
             max-width: 632px;
         }
-}
+    }
 
-&__img {
-    display: block;
-    width: 100%;
-}
+    &__img {
+        display: block;
+        width: 100%;
+    }
 }
 
 .job__time-picture {

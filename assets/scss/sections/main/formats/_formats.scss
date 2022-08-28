@@ -6,6 +6,10 @@
     padding-top: 120px;
     padding-bottom: 150px;
 
+    @include xl {
+        margin-top: 60px;
+    }
+
     &__title {
         font-weight: 600;
         font-size: 50px;
@@ -13,15 +17,30 @@
         text-align: center;
         color: $color-primary;
         margin: 0 0 76px 0;
+
+        @include sm {
+            font-size: 35px;
+        }
     }
 
     &__cards {
-        padding-left: 40px;
-        padding-right: 40px;
+        margin-left: 40px;
+        margin-right: 40px;
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
         column-gap: 110px;
         row-gap: 69px;
+
+        @include xl-min {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        @include xl-md {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include md {
+            grid-template-columns: 1fr;
+        }
     }
 
     &__card {
@@ -29,6 +48,7 @@
         display: flex;
         flex-direction: column;
         text-align: center;
+        margin: 0 auto;
 
         &-title {
             font-weight: 600;
@@ -48,7 +68,7 @@
         }
     }
 
-    &__uLink{
+    &__uLink {
         text-decoration: underline;
     }
 }

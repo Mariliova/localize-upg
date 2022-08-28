@@ -14,7 +14,12 @@
         text-align: center;
         color: $color-primary;
         max-width: 720px;
-        margin: 9px auto 66px auto
+        margin: 9px auto 66px auto;
+
+        @include sm {
+            font-size: 35px;
+        }
+
     }
 
     &__list {
@@ -37,7 +42,7 @@
             grid-template-columns: repeat(2, minmax(50px, max-content));
         }
 
-        @include sm{
+        @include sm {
             justify-content: center;
         }
     }
