@@ -1,0 +1,91 @@
+@use "../../presets" as *;
+@use "../../mixins" as *;
+
+.header-navbar {
+
+  &__btn {
+    
+    width: 30px;
+    height: 22.5px;
+    position: relative;
+    margin: 25px auto;
+    transform: rotate(0deg);
+    transition: .5s ease-in-out;
+    cursor: pointer;
+
+    @include md-min {
+      display: none;
+    }
+
+    &-row {
+      display: block;
+      position: absolute;
+      height: 4.5px;
+      width: 100%;
+      background: $color-accent;
+      border-radius: 3px;
+      opacity: 1;
+      left: 0;
+      transform: rotate(0deg);
+      transition: .25s ease-in-out;
+
+      &:nth-child(1) {
+        top: 0px;
+      }
+
+      &:nth-child(2) {
+        top: 9px;
+      }
+
+      &:nth-child(3) {
+        top: 18px;
+      }
+
+    }
+
+    &.open .header-navbar__btn-row {
+      &:nth-child(1) {
+        top: 9px;
+        transform: rotate(135deg);
+      }
+
+      &:nth-child(2) {
+        opacity: 0;
+        left: -60px;
+      }
+
+      &:nth-child(3) {
+        top: 9px;
+        transform: rotate(-135deg);
+      }
+    }
+  }
+
+  &__list {
+    @include unlist;
+    display: flex;
+    column-gap: $gap;
+    flex-wrap: wrap;
+
+    @include xl {
+      column-gap: 0.4em;
+    }
+
+    @include md {
+      padding: $gap $gap-sm;
+      background-color: $color-light;
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      box-shadow: 0 5px 10px rgba($color-primary, $alpha: 0.5);
+    }
+  }
+  
+
+  &__link {
+    display: block;
+    padding: 0.5em 17px;
+  }
+}

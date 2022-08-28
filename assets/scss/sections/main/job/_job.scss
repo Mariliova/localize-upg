@@ -1,0 +1,101 @@
+@use "../../../presets" as *;
+@use "../../../mixins" as *;
+
+.job {
+    display: grid;
+
+    @include xl-min {
+        margin-top: 100px;
+    }
+
+    @include xl {
+        margin-top: 0;
+    }
+
+    &__title {
+        @include visualy-hidden
+    }
+}
+
+.section {
+    display: grid;
+
+    @include xl-min {
+        grid-template-columns: 1fr 1fr;
+        margin-bottom: 248px;
+    }
+
+    &__content {
+        max-width: 530px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__title {
+        font-weight: 600;
+        font-size: 50px;
+        line-height: 1.2;
+        color: $color-primary;
+
+        @include xl-min {
+            margin-top: 145px;
+        }
+
+        @include xl {
+            margin-top: 60px;
+        }
+    }
+
+    &__description {
+        margin-top: -10px;
+        font-size: 20px;
+        line-height: 1.5;
+        color: $color-primary;
+    }
+
+    &__uLink {
+        text-decoration: underline;
+    }
+
+    &__notes {
+        margin-top: 34px;
+        margin-bottom: 50px;
+    }
+
+    &__link {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 1.5;
+        color: $color-primary;
+    }
+
+    &__picture {
+        @include md-min {
+            width: 632px;
+        }
+
+        @include md {
+            max-width: 632px;
+        }
+}
+
+&__img {
+    display: block;
+    width: 100%;
+}
+}
+
+.job__time-picture {
+    @include xl-min {
+        order: -1;
+        margin-right: 138px;
+    }
+
+}
+
+.job__work-picture {
+    @include xl-min {
+        order: -1;
+        margin-right: 138px;
+    }
+}

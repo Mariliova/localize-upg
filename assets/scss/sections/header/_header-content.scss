@@ -1,0 +1,97 @@
+@use "../../presets" as *;
+@use "../../mixins" as *;
+
+.header-content {
+  display: grid;
+  padding-top: $gap * 2;
+  padding-bottom: $gap * 2;
+  margin-top: 45px;
+
+  @include xl-min {
+    grid-template-areas: "ttl pic""dsc pic""act pic""nts pic";
+    grid-template-columns: 580px 1fr;
+  }
+
+  @include xl-lg {
+    grid-template-areas: "ttl pic""dsc pic""act pic""nts pic";
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @include lg {
+    grid-template-areas: "ttl""dsc""pic""act""nts";
+    text-align: center;
+  }
+
+  &__title {
+    grid-area: ttl;
+    font-weight: 600;
+    line-height: 1.08;
+    margin-bottom: 50px;
+    row-gap: $gap;
+
+    @include sm-min {
+      font-size: 65px;
+    }
+
+    @include sm {
+      font-size: 45px;
+    }
+  }
+
+  &__description {
+    grid-area: dsc;
+    font-size: 25px;
+    line-height: 1.4;
+    margin-bottom: 50px;
+
+    @include lg-min {
+      padding-right: 70px;
+    }
+
+    @include sm-min {
+      font-size: 25px;
+    }
+
+    @include sm {
+      font-size: 20px;
+    }
+  }
+
+  &__actions {
+    grid-area: act;
+    display: flex;
+    gap: $gap-sm;
+    margin-bottom: 25px;
+
+    @include lg {
+      justify-content: center;
+    }
+  }
+
+  &__notes {
+    grid-area: nts;
+    line-height: 1.67;
+  }
+
+  &__picture {
+    grid-area: pic;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 56px -6px 0px -42px;
+  }
+
+  &__image {
+    @include lg-min {
+      width: 100%;
+    }
+
+    @include lg-md {
+      width: 50%;
+    }
+
+    @include md {
+      width: 70%;
+    }
+  }
+}
