@@ -541,6 +541,70 @@ a {
 
   width: 100%;
 }
+
+.formats {
+  padding-top: 120px;
+  padding-bottom: 150px;
+
+  background-color: #fff8e4;
+}
+.formats__title {
+  margin: 0 0 76px 0;
+
+  text-align: center;
+
+  color: #000000;
+
+  font-size: 50px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+.formats__cards {
+  display: grid;
+
+  padding-right: 40px;
+  padding-left: 40px;
+
+  -webkit-column-gap: 110px;
+     -moz-column-gap: 110px;
+          column-gap: 110px;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 69px;
+}
+.formats__card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+      flex-direction: column;
+
+  max-width: 330px;
+
+  text-align: center;
+}
+.formats__card-title {
+  color: #000000;
+
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+.formats__card-description {
+  color: #000000;
+
+  font-size: 18px;
+  line-height: 1.39;
+}
+.formats__card-picture {
+  -webkit-box-ordinal-group: 0;
+  -ms-flex-order: -1;
+  order: -1;
+}
+.formats__uLink {
+  text-decoration: underline;
+}
 @media (min-width: 576px) {
   .btn--md {
     min-width: 160px;

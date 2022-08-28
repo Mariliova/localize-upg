@@ -1,3 +1,54 @@
 @use "../../../presets" as *;
 @use "../../../mixins" as *;
 
+.formats {
+    background-color: $color-bg-light;
+    padding-top: 120px;
+    padding-bottom: 150px;
+
+    &__title {
+        font-weight: 600;
+        font-size: 50px;
+        line-height: 1.2;
+        text-align: center;
+        color: $color-primary;
+        margin: 0 0 76px 0;
+    }
+
+    &__cards {
+        padding-left: 40px;
+        padding-right: 40px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 110px;
+        row-gap: 69px;
+    }
+
+    &__card {
+        max-width: 330px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+
+        &-title {
+            font-weight: 600;
+            font-size: 25px;
+            line-height: 1.4;
+            color: $color-primary;
+        }
+
+        &-description {
+            font-size: 18px;
+            line-height: 1.39;
+            color: $color-primary;
+        }
+
+        &-picture {
+            order: -1;
+        }
+    }
+
+    &__uLink{
+        text-decoration: underline;
+    }
+}
