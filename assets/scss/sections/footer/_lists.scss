@@ -1,0 +1,51 @@
+@use "../../presets" as *;
+@use "../../mixins" as *;
+
+
+.footer {
+
+    &__lists {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: 34px;
+        margin-left: 70px;
+
+        @include xl-md {
+            grid-template-columns: repeat(2, 1fr);
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        @include md-sm {
+            grid-template-columns: repeat(4, 1fr);
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        @include sm {
+            grid-template-columns: repeat(2, 1fr);
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    &__subtitle {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 1.25;
+        margin: 5px 0 21px 0;
+    }
+
+    &__list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        max-width: 187px;
+    }
+
+    &__li {
+        font-size: 15px;
+        line-height: 1em;
+        margin-bottom: 1em;
+    }
+}

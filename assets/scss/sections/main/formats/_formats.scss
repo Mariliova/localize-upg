@@ -3,8 +3,9 @@
 
 .formats {
     background-color: $color-bg-light;
+    margin-top: -96px;
     padding-top: 120px;
-    padding-bottom: 150px;
+    padding-bottom: 140px;
 
     @include xl {
         margin-top: 60px;

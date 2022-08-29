@@ -1,0 +1,27 @@
+@use "../../presets" as *;
+@use "../../mixins" as *;
+
+.footer {
+    background-color: $color-bg-gray;
+    color: $color-primary;
+    padding-top: 92px;
+
+    &__content {
+        display: flex;
+        
+        @include md {
+            flex-wrap: wrap;
+        }
+        
+
+        // &__study {
+
+        // }
+
+        // &__lists {
+        // }
+
+        // &__copyrights {
+        // }
+    }
+}
