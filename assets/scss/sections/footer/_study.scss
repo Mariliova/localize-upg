@@ -1,0 +1,19 @@
+@use "../../presets/" as *;
+@use "../../mixins" as *;
+
+.footer__study {
+
+    &__title {}
+
+    &__picture {}
+
+    &__img1 {}
+
+    &__brand-link {}
+
+    &__brand-img {}
+
+    &__description {}
+
+    &__link1 {}
+}

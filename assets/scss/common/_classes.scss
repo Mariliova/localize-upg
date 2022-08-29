@@ -24,6 +24,11 @@
   border-color: rgba($color-primary, $alpha: .5);
 }
 
+.btn--dark{
+  background-color: $color-primary;
+  color: $color-light;
+}
+
 .btn--accent {
   background-color: $color-accent;
   border-color: $color-accent;
@@ -45,5 +50,15 @@
     min-width: 120px;
     height: 50px;
   }
+}
+
+.btn--lg{
+  min-width: 193px;
+    height: 60px;
+
+    @include sm {
+        min-width: 150px;
+        height: 50px;
+      }
 }
 

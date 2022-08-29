@@ -4,12 +4,20 @@
 
 .feedback {
     background-color: $color-bg-dark;
-    padding-top: 83px;
-    padding-bottom: 60px;
+    padding-top: 86px;
+    padding-bottom: 81px;
 
     &__content {
         display: grid;
         grid-template-areas: "pic1 ttl pic2";
+
+        @include xl {
+            grid-template-areas: "ttl ttl""pic1 pic2";
+        }
+
+        @include md {
+            grid-template-areas: "ttl ttl""pic1 pic1""pic2 pic2";
+        }
     }
 
     &__title {
@@ -20,10 +28,24 @@
         color: $color-primary;
         max-width: 461px;
         margin: 25px 66px 0 -14px;
+
+        @include xl {
+            margin: 0 auto $gap;
+            max-width: 100%;
+            text-align: center;
+        }
+
+        @include md {
+            font-size: 30px;
+        }
     }
 
     &__picture1 {
         grid-area: pic1;
+
+        @include xl {
+            margin: 0 auto;
+        }
     }
 
     &__picture2 {
@@ -31,13 +53,37 @@
         display: flex;
         border-left: 1px solid $color-primary;
         padding-top: $gap;
+
+        @include md {
+            justify-content: center;
+            border-left: 1px solid transparent;
+            border-top: 1px solid $color-primary;
+            margin-top: $gap;
+        }
+    }
+
+    &__img1 {
+
+        @include sm {
+            width: calc(176px * 0.7);
+            height: calc(154px * 0.7);
+        }
     }
 
     &__img2 {
         display: block;
         width: 128px;
         height: 116px;
-        margin-left: 71px;
+
+        @include sm-min {
+            margin-left: 71px;
+        }
+
+
+        @include sm {
+            width: calc(128px * 0.7);
+            height: calc(116px * 0.7);
+        }
     }
 
     &__img3 {
@@ -45,5 +91,10 @@
         width: 150px;
         height: 116px;
         margin-left: 70px;
+
+        @include sm {
+            width: calc(150px * 0.7);
+            height: calc(116px * 0.7);
+        }
     }
 }
