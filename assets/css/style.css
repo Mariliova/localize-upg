@@ -348,6 +348,15 @@ a {
   border-radius: 3px;
   background: #ff6336;
 }
+.header-navbar__btn-row:nth-child(1) {
+  top: 0;
+}
+.header-navbar__btn-row:nth-child(2) {
+  top: 9px;
+}
+.header-navbar__btn-row:nth-child(3) {
+  top: 18px;
+}
 .header-navbar__btn.open .header-navbar__btn-row:nth-child(1) {
   top: 9px;
 
@@ -666,18 +675,6 @@ a {
 
   font-size: 20px;
   line-height: 1.5;
-}
-
-.card1__title {
-  margin-top: 43px;
-}
-
-.card2__title {
-  margin-top: 77px;
-}
-
-.card3__title {
-  margin-top: 59px;
 }
 
 .quotation {
@@ -1035,6 +1032,15 @@ a {
   .section__picture {
     width: 632px;
   }
+  .card1__title {
+    margin-top: 43px;
+  }
+  .card2__title {
+    margin-top: 77px;
+  }
+  .card3__title {
+    margin-top: 59px;
+  }
 }
 @media (min-width: 992px) {
   .header-menu__actions {
@@ -1104,17 +1110,6 @@ a {
   .formats {
     margin-top: 60px;
   }
-  .productivity__card {
-    -webkit-box-align: center;
-    align-items: center;
-    -ms-flex-align: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-
-    max-width: 70%;
-    margin: 0 auto;
-  }
   .feedback__content {
     grid-template-areas: "ttl ttl" "pic1 pic2";
   }
@@ -1135,6 +1130,19 @@ a {
   .productivity__cards {
     grid-template-columns: repeat(2, 1fr);
     row-gap: 40px;
+  }
+  .productivity__card {
+    -webkit-box-align: center;
+    align-items: center;
+    -ms-flex-align: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+
+    max-width: 70%;
+    margin: 0 auto;
+
+    text-align: center;
   }
   .footer__study {
     margin: 0 auto;
@@ -1162,6 +1170,8 @@ a {
 }
 @media (max-width: 991.8px) {
   .header-content {
+    margin-top: 30px;
+
     text-align: center;
 
     grid-template-areas: "ttl" "dsc" "pic" "act" "nts";
@@ -1170,6 +1180,9 @@ a {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
+  }
+  .header-content__picture {
+    margin: 10px 0 30px 0;
   }
 }
 @media (max-width: 991.8px) and (min-width: 576px) {
@@ -1234,6 +1247,19 @@ a {
   }
   .productivity__cards {
     grid-template-columns: 1fr;
+  }
+  .productivity__card {
+    -webkit-box-align: center;
+    align-items: center;
+    -ms-flex-align: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+
+    max-width: 90%;
+    margin: 0 auto 30px;
+
+    text-align: center;
   }
   .quotation__constraction {
     -ms-flex-wrap: wrap;
@@ -1321,10 +1347,18 @@ a {
     height: 50px;
   }
   .header-content__title {
+    margin-bottom: 20px;
+
     font-size: 45px;
   }
   .header-content__description {
+    margin-bottom: 10px;
+
     font-size: 20px;
+  }
+  .brands {
+    padding-top: 50px;
+    padding-bottom: 50px;
   }
   .brands__title {
     font-size: 35px;
@@ -1337,11 +1371,34 @@ a {
   .section__title {
     font-size: 35px;
   }
+  .formats {
+    padding-top: 60px;
+    padding-bottom: 70px;
+  }
   .formats__title {
     font-size: 35px;
   }
+  .formats__card-img {
+    width: 30%;
+  }
+  .productivity {
+    margin-top: 75px;
+    margin-bottom: 90px;
+  }
   .productivity__title {
-    font-size: 35px;
+    font-size: 30px;
+  }
+  .productivity__card-title {
+    font-size: 20px;
+  }
+  .productivity__card-img {
+    width: 70%;
+  }
+  .productivity__card-description {
+    font-size: 15px;
+  }
+  .productivity__card-link {
+    font-size: 16px;
   }
   .quotation__text {
     font-size: 20px;

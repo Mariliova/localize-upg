@@ -5,6 +5,11 @@
     margin-top: 149px;
     margin-bottom: 187px;
 
+    @include sm {
+        margin-top: 75px;
+        margin-bottom: 90px;
+    }
+
     &__title {
         font-weight: 600;
         font-size: 50px;
@@ -14,14 +19,14 @@
         text-align: center;
 
         @include sm {
-            font-size: 35px;
+            font-size: 30px;
         }
     }
 
     &__cards {
         display: grid;
         column-gap: 30px;
-        grid-template-columns: repeat(3, 1fr); 
+        grid-template-columns: repeat(3, 1fr);
 
         @include xl-md {
             row-gap: 40px;
@@ -40,11 +45,20 @@
         flex-direction: column;
         color: $color-primary;
 
-        @include xl {
+        @include xl-md {
             max-width: 70%;
             justify-content: center;
             align-items: center;
+            text-align: center;
             margin: 0 auto;
+        }
+
+        @include md {
+            max-width: 90%;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin: 0 auto 30px;
         }
 
         &-title {
@@ -52,15 +66,29 @@
             font-size: 30px;
             line-height: 1.33;
             margin-bottom: 17px;
+
+            @include sm {
+                font-size: 20px;
+            }
         }
 
         &-picture {
             order: -1;
         }
 
+        &-img {
+            @include sm {
+                width: 70%;
+            }
+        }
+
         &-description {
             font-size: 20px;
             line-height: 1.5;
+
+            @include sm {
+                font-size: 15px;
+            }
         }
 
         &-uLink {
@@ -71,19 +99,29 @@
             text-decoration: underline;
             font-size: 20px;
             line-height: 1.5;
+
+            @include sm {
+                font-size: 16px;
+            }
         }
     }
 
 }
 
 .card1__title {
+   @include md-min{
     margin-top: 43px;
+   } 
 }
 
 .card2__title {
-    margin-top: 77px;
+    @include md-min {
+            margin-top: 77px;
+        }
 }
 
 .card3__title {
-    margin-top: 59px;
+    @include md-min {
+            margin-top: 59px;
+        }
 }

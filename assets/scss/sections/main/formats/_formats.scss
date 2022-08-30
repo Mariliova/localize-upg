@@ -11,6 +11,11 @@
         margin-top: 60px;
     }
 
+    @include sm {
+        padding-top: 60px;
+        padding-bottom: 70px;
+    }
+
     &__title {
         font-weight: 600;
         font-size: 50px;
@@ -66,6 +71,12 @@
 
         &-picture {
             order: -1;
+        }
+
+        &-img {
+            @include sm {
+                width: 30%;
+            }
         }
     }
 

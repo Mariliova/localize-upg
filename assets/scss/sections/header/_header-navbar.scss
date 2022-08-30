@@ -4,7 +4,7 @@
 .header-navbar {
 
   &__btn {
-    
+
     width: 30px;
     height: 22.5px;
     position: relative;
@@ -17,6 +17,7 @@
       display: none;
     }
 
+
     &-row {
       display: block;
       position: absolute;
@@ -28,6 +29,18 @@
       left: 0;
       transform: rotate(0deg);
       transition: .25s ease-in-out;
+
+      &:nth-child(1) {
+        top: 0px;
+      }
+
+      &:nth-child(2) {
+        top: 9px;
+      }
+
+      &:nth-child(3) {
+        top: 18px;
+      }
     }
 
     &.open .header-navbar__btn-row {
@@ -69,7 +82,7 @@
       box-shadow: 0 5px 10px rgba($color-primary, $alpha: 0.5);
     }
   }
-  
+
 
   &__link {
     display: block;
