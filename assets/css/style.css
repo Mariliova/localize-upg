@@ -365,7 +365,7 @@ a {
           transform: rotate(135deg);
 }
 .header-navbar__btn.open .header-navbar__btn-row:nth-child(2) {
-  left: -60px;
+  left: -30px;
 
   opacity: 0;
 }
